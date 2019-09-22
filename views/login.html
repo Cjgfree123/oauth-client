@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css"></link>
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css"></link>
-    <title><%=title%></title>
-</head>
-<body>
-    <div class="nav">客户端</div>
-</body>
-</html>
+<%include header.html%>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-heading">
+            <h5 class="text-center">登录</h5>
+        </div>
+        <div class="panel-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="username" class="control-label">用户名</label>
+                    <input type="text" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label">密码</label>
+                    <input type="text" class="form-control" name="username">
+                </div>
+                <div class="form-group text-center">
+                    <a href="">
+                        <input type="submit" class="btn btn-primary" />
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer text-center">
+            <img src="/images/qqlogin.png" alt="QQ登录" />
+        </div>
+    </div>
+</div>
+<%include footer.html%>
