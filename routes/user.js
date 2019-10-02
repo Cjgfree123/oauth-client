@@ -24,7 +24,6 @@ router.get('/login', function (req, res, next) {
 // /user/callback
 router.get("/callback", function (req, res, next) {
   let { code } = req.query;
-
-})
+});
 
 module.exports = router;

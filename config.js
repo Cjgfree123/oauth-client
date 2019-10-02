@@ -1,6 +1,6 @@
 module.exports = {
-    appId: "101499238",
-    appKey: "xxxxxx",
+    appId: "5d945e4f49d7d10943941289",
+    appKey: "ba96fff7-bf8c-49ae-a6fe-f80321b62789",
     access_token: "access_token",
     redirect_uri: "http://localhost:4000/user/callback",
     // 授权码authorize code
