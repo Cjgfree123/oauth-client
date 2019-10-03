@@ -2,6 +2,8 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -19,6 +21,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+    secret: true,
+    resave: true,
+    saveUninitialized: true,
+    store: new MongoStore({
+      url: "mongodb://127.0.0.1",
+    })
+  })
+);
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
